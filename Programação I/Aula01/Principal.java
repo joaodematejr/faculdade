@@ -11,10 +11,9 @@ public class Principal {
     novaPeca.tamanho = "25cm";
     novaPeca.precoCusto = 100;
     novaPeca.tempoParaTroca = 30;
-    novaPeca.percentualVenda = 10;
     // CHAMADA DOS VOIDS DO OUTRO ARQUIVO
     novaPeca.exibirInformacoes();
-    novaPeca.calcularOprecoDeVenda(1);
+    novaPeca.calcularOprecoDeVenda(100);
   }
 
 }

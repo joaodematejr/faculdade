@@ -13,6 +13,7 @@ public class Peca {
   void calcularOprecoDeVenda(int percentualVenda) {
     double percentual = percentualVenda / precoCusto;
     double calcularPorcentagem = precoCusto + (percentual * precoCusto);
+    System.out.println("Porcentual da Venda: " + percentualVenda + "%");
     System.out.println("Valor final com % " + calcularPorcentagem);
   }
 
@@ -23,7 +24,6 @@ public class Peca {
     System.out.println("Tamanho: " + tamanho);
     System.out.println("Preço de Custo: " + precoCusto);
     System.out.println("Tempo para Troca " + tempoParaTroca + " minutos");
-    System.out.println("Porcentual da Venda: " + percentualVenda + "%");
 
   }
 }
