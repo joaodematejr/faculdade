@@ -39,14 +39,14 @@ int main(int argc, const char * argv[]) {
     {
         if (renderOpcaoOrdenacao() == 1)
         {
-            printf("1 \n");
+            renderVetorInt();
         }
         else if (renderOpcaoOrdenacao() == 2)
         {
-          printf("2 \n");
+            renderVetorInt();
         }
         else {
-            printf("Opção invalida");
+            printf("Opção invalida \n");
         }
     }
     // ORDENAÇÃO DE VETOR COM VALORES CHAR
@@ -61,7 +61,7 @@ int main(int argc, const char * argv[]) {
           printf("2 \n");
         }
         else {
-            printf("Opção invalida");
+            printf("Opção invalida \n");
         }
     }
     // ORDENAÇÃO DE VETOR COM VALORES STRING
@@ -76,7 +76,7 @@ int main(int argc, const char * argv[]) {
           printf("2 \n");
         }
         else {
-            printf("Opção invalida");
+            printf("Opção invalida \n");
         }
     }
     else{
