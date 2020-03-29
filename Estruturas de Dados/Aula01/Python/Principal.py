@@ -1,14 +1,23 @@
 # -*- coding: utf-8 -*-
+""" RENDER MENU """
+
+
 def renderMenu():
     opcaoMenu = int(
         input('Programa para Ordenação de Vetores \nEscolha uma opção \n1 - Ordenação de Vetor com valores Int \n2 - Ordenação de Vetor com valores char \n3 - Ordenação de Vetor com valores Nomes \n'))
     return opcaoMenu
 
 
+""" RENDER FUNCAO DAS OPÇÃO  """
+
+
 def renderOpcaoOrdenacao():
     opcaoOrdenacao = int(
         input('Exibir em \n1 - Decrescente \n2 - Crescente \n'))
     return opcaoOrdenacao
+
+
+""" ORDENAÇÃO DE VETOR COM VALORES INT  """
 
 
 def renderVetorInt(modoExibicao):
@@ -21,6 +30,9 @@ def renderVetorInt(modoExibicao):
     return
 
 
+""" ORDENAÇÃO DE VETOR COM VALORES CHAR """
+
+
 def renderVetorChar(modoExibicao):
     letras = ["C", "J", "D", "B", "G", "H", "E", "A", "F", "I"]
     letrasOrdenados = sorted(letras, reverse=modoExibicao)  # DECRESCENTE
@@ -29,6 +41,9 @@ def renderVetorChar(modoExibicao):
     """ //RESULTADO - VETOR ORDENADO """
     print('Ordenada', letrasOrdenados)
     return
+
+
+""" ORDENAÇÃO DE VETOR COM VALORES STRING """
 
 
 def renderVetorNomes(modoExibicao):
