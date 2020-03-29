@@ -34,7 +34,7 @@ int renderVetorInt()
 
 
 int main(int argc, const char * argv[]) {
-    
+    // ORDENAÇÃO DE VETOR COM VALORES INT
     if (renderMenu() == 1)
     {
         if (renderOpcaoOrdenacao() == 1)
@@ -49,12 +49,35 @@ int main(int argc, const char * argv[]) {
             printf("Opção invalida");
         }
     }
+    // ORDENAÇÃO DE VETOR COM VALORES CHAR
     else if (renderMenu() == 2)
     {
-        printf("2  \n");
+        if (renderOpcaoOrdenacao() == 1)
+        {
+            printf("1 \n");
+        }
+        else if (renderOpcaoOrdenacao() == 2)
+        {
+          printf("2 \n");
+        }
+        else {
+            printf("Opção invalida");
+        }
     }
-    else if (renderMenu() == 3){
-        printf("3  \n");
+    // ORDENAÇÃO DE VETOR COM VALORES STRING
+    else if (renderMenu() == 3)
+    {
+        if (renderOpcaoOrdenacao() == 1)
+        {
+            printf("1 \n");
+        }
+        else if (renderOpcaoOrdenacao() == 2)
+        {
+          printf("2 \n");
+        }
+        else {
+            printf("Opção invalida");
+        }
     }
     else{
         printf("Opção invalida escola de 1 a 3 \n");
