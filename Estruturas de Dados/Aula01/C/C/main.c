@@ -8,8 +8,56 @@
 
 #include <stdio.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+// RENDER MENU
+int renderMenu()
+{
+    int opcaoMenu;
+    printf("Programa para Ordenação de Vetores \nEscolha uma opção \n1 - Ordenação de Vetor com valores Int \n2 - Ordenação de Vetor com valores char \n3 - Ordenação de Vetor com valores Nomes \n");
+    scanf("%d", &opcaoMenu);
+    return opcaoMenu;
+}
+
+// RENDER FUNCAO DAS OPÇÃO
+int renderOpcaoOrdenacao()
+{
+    int opcaoOrdenacao;
+    printf("Exibir em \n1 - Decrescente \n2 - Crescente \n");
+    scanf("%d", &opcaoOrdenacao);
+    return opcaoOrdenacao;
+}
+
+// ORDENAÇÃO DE VETOR COM VALORES INT
+int renderVetorInt()
+{
     return 0;
+}
+
+
+int main(int argc, const char * argv[]) {
+    
+    if (renderMenu() == 1)
+    {
+        if (renderOpcaoOrdenacao() == 1)
+        {
+            printf("1 \n");
+        }
+        else if (renderOpcaoOrdenacao() == 2)
+        {
+          printf("2 \n");
+        }
+        else {
+            printf("Opção invalida");
+        }
+    }
+    else if (renderMenu() == 2)
+    {
+        printf("2  \n");
+    }
+    else if (renderMenu() == 3){
+        printf("3  \n");
+    }
+    else{
+        printf("Opção invalida escola de 1 a 3 \n");
+    }
+    return(0);
 }
