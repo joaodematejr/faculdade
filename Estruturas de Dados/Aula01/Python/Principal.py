@@ -79,4 +79,4 @@ elif renderMenu() == 3:
     else:
         print("Opção invalida")
 else:
-    print("Erro no sistema entre em contato com desenvolvedor")
+    print("Opção invalida escola de 1 a 3")
