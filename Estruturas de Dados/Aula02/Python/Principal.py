@@ -23,19 +23,19 @@ def renderMenuINT():
 
 def bubbleSort():
     iniciarTempoExecucao = time.time()
-    elementos = len(LISTA_NUMEROS)-1
+    listNums = LISTA_NUMEROS
+    elementos = len(listNums)-1
     ordenado = False
     while not ordenado:
         ordenado = True
         for i in range(elementos):
-            if LISTA_NUMEROS[i] > LISTA_NUMEROS[i+1]:
-                LISTA_NUMEROS[i], LISTA_NUMEROS[i +
-                                                1] = LISTA_NUMEROS[i+1], LISTA_NUMEROS[i]
+            if listNums[i] > listNums[i+1]:
+                listNums[i], listNums[i + 1] = listNums[i+1], listNums[i]
                 ordenado = False
-    print(LISTA_NUMEROS)
+    print(listNums)
     encerraTempoExecucao = time.time()
-    print("Função Bubble Sort levou {:.2f}".format(
-        encerraTempoExecucao-iniciarTempoExecucao), "Milissegundos")
+    tempo = encerraTempoExecucao-iniciarTempoExecucao
+    print("Função Bubble Sort levou {:.2f}".format(tempo), "Milissegundos")
     pass
 
 
