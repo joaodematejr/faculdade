@@ -20,8 +20,9 @@ def exibir_tela(titulo, lista):
         print(titulo, q)
 
 
+porcetagem = int(input("Digite a porcetagem a aplicar na lista : "))
+
 for preco in preco_produto:
-    porcetagem = int(input("Digite a porcetagem a aplicar na lista : "))
     formula = porcetagem * preco
     resultado = formula / 100
     preco_produto_desconto.append(resultado)

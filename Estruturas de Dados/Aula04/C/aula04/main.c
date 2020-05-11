@@ -8,11 +8,6 @@
 
 #include <stdio.h>
 
-int exibir_tela() {
-    printf("vai tomar no cu \n");
-    return 0;
-}
-
 int main(int argc, const char * argv[]) {
     
     int lista_codigo_produto[5];
@@ -20,7 +15,7 @@ int main(int argc, const char * argv[]) {
     int lista_preco_produto_desconto[5];
     int lista_quantidade_estoque[5];
     
-    int limiteMaximo = 1;
+    int limiteMaximo = 5;
     int posicao = 0;
     int porcetagem;
 
@@ -49,9 +44,11 @@ int main(int argc, const char * argv[]) {
         lista_preco_produto_desconto[loop] = resultado;
         for (int loop = 0; loop < 5; ++loop) {
             if (lista_quantidade_estoque[loop] > 500) {
-                exibir_tela("Quantidade em Estoque");
-                exibir_tela("Codigo do produto");
-                exibir_tela("Preço com Desconto");
+                 for (int loop = 0; loop < 5; ++loop) {
+                    printf("Quantidade em Estoque %d \n", lista_quantidade_estoque[loop]);
+                    printf("Codigo do produto %d \n", lista_codigo_produto[loop]);
+                    printf("Preço com Desconto %d \n", lista_preco_produto_desconto[loop]);
+                }
             }
            ;
         }
