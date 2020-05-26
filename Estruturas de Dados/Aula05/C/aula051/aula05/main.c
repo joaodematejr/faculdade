@@ -9,14 +9,14 @@
 #include <stdio.h>
 #include <string.h>
 
-struct st_aluno{
+struct st_funcionario{
     char nome[100];
-    int nota_final;
-}alunos;
+    int salario;
+}funcionario;
 
-struct st_turma{
-    struct st_aluno alunos[5];
-}turma;
+struct st_empresa{
+    struct st_funcionario funcionario[5];
+}empresa;
 
 
 int main() {
@@ -24,18 +24,18 @@ int main() {
     int i;
     for (i = 0; i < 5; i++) {
         printf("Informe o nome do aluno: ");
-        fgets(turma.alunos[i].nome, 100, stdin);
+        fgets(empresa.funcionario[i].nome, 100, stdin);
         printf("Informe a nota do aluno: ");
-        scanf("%d", &turma.alunos[i].nota_final);
+        scanf("%d", &empresa.funcionario[i].salario);
         getchar();
     }
     
     for (i = 0; i < 5; i++) {
-        if (turma.alunos[i].nota_final > 7) {
+        if (empresa.funcionario[i].salario > 7) {
             printf("Nenhum aluno Aprovado \n");
         } else {
-            printf("Nome: %s\n", turma.alunos[i].nome);
-            printf("Nota Final: %d\n", turma.alunos[i].nota_final);
+            printf("Nome: %s\n", empresa.funcionario[i].nome);
+            printf("Salario: %d\n", empresa.funcionario[i].salario);
         }
     }
     
