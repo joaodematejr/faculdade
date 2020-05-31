@@ -25,7 +25,7 @@ public class MercadoriaController {
 
 		try {
 			Gson gson = new GsonBuilder().setPrettyPrinting().create();
-			FileWriter arquivoJson = new FileWriter("json/listaclientes.json");
+			FileWriter arquivoJson = new FileWriter("json/listamercadorias.json");
 			gson.toJson(mercadoria, arquivoJson);
 			arquivoJson.close();
 			JOptionPane.showMessageDialog(null, "Mercadoria salva com sucesso !!!",
