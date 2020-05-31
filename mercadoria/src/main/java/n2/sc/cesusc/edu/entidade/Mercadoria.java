@@ -1,15 +1,17 @@
 package n2.sc.cesusc.edu.entidade;
 
+import java.util.UUID;
+
 public class Mercadoria {
-	private int id;
+	private UUID id;
 	private String nome;
     private String descricao;
     
-	public int getId() {
+	public UUID getId() {
 		return id;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setId(UUID id2) {
+		this.id = id2;
 	}
 	public String getNome() {
 		return nome;

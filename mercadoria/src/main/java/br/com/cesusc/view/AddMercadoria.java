@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -75,14 +76,17 @@ public class AddMercadoria extends JFrame {
 		btnNewButton.setFont(new Font("Apple Chancery", Font.PLAIN, 16));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
 				String nome = textField.getText();
 				String descricao = textArea.getText();
 				if (nome.isEmpty() && descricao.isEmpty()) {
-					System.out.println("Campos vazios");
 					JOptionPane.showMessageDialog(null,"Não seja um usuário burro preencha todos os campos, animal.","Aviso !!!",JOptionPane.PLAIN_MESSAGE);
 				}else {
-					mercadoriaMB.salvarMercadoria(nome, descricao);
+					try {
+						mercadoriaMB.salvarMercadoria(nome, descricao);
+					} catch (IOException e1) {
+						JOptionPane.showMessageDialog(null,"Ocorreu um erro por favor entre em contato com desenvolvedor","Aviso !!!",JOptionPane.PLAIN_MESSAGE);
+						e1.printStackTrace();
+					}
 				}	
 			}
 		});
