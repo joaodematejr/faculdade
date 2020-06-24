@@ -5,11 +5,24 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>br.com.cesusc</groupId>
-	<artifactId>mercadoria</artifactId>
+	<groupId>cesusc.edu</groupId>
+	<artifactId>n3</artifactId>
 	<version>01.00.00-00</version>
 
-	<name>mercadoria</name>
+	<developers>
+		<developer>
+			<id>joao</id>
+			<name>João Dematé Jr</name>
+			<email>joaodematejr@gmail.com</email>
+		</developer>
+		<developer>
+			<id>joao</id>
+			<name>Bruno Ibias</name>
+			<email>brunoibias@gmail.com</email>
+		</developer>
+	</developers>
+
+	<name>n3</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
 
@@ -20,18 +33,20 @@
 	</properties>
 
 	<dependencies>
+	
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-			<version>2.8.6</version>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.20</version>
 		</dependency>
+
 	</dependencies>
 
 	<build>
