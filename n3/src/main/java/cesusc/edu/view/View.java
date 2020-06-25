@@ -24,6 +24,7 @@ public class View extends JFrame {
 	ListMerchandiseView listMerchandiseView = new ListMerchandiseView();
 	MerchandiseController merchandiseController = new MerchandiseController();
 	ListChartersView listChartersView = new ListChartersView();
+	Dashboard dashboard = new Dashboard(getTitle());
 	
 
 	public static void main(String[] args) {
@@ -62,7 +63,7 @@ public class View extends JFrame {
 		JButton btnCadastrarMercadorias = new JButton("Cadastrar Mercadorias");
 		btnCadastrarMercadorias.setForeground(Color.DARK_GRAY);
 		btnCadastrarMercadorias.setFont(new Font("Apple Chancery", Font.PLAIN, 24));
-		btnCadastrarMercadorias.setBackground(Color.GREEN);
+		btnCadastrarMercadorias.setBackground(Color.DARK_GRAY);
 		
 		btnCadastrarMercadorias.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -84,6 +85,7 @@ public class View extends JFrame {
 		});
 		
 		JButton btnCadastrarFretamento = new JButton("Cadastrar Fretamento");
+		btnCadastrarFretamento.setBackground(Color.RED);
 		btnCadastrarFretamento.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				chartersView.setVisible(true);
@@ -93,7 +95,7 @@ public class View extends JFrame {
 		});
 		btnCadastrarFretamento.setForeground(Color.DARK_GRAY);
 		btnCadastrarFretamento.setFont(new Font("Apple Chancery", Font.PLAIN, 24));
-		btnCadastrarFretamento.setBackground(Color.GREEN);
+		btnCadastrarFretamento.setBackground(Color.DARK_GRAY);
 		
 		JButton btnListarFretamentos = new JButton("Listar Fretamentos");
 		btnListarFretamentos.addActionListener(new ActionListener() {
@@ -105,6 +107,21 @@ public class View extends JFrame {
 		btnListarFretamentos.setForeground(Color.DARK_GRAY);
 		btnListarFretamentos.setFont(new Font("Apple Chancery", Font.PLAIN, 24));
 		btnListarFretamentos.setBackground(Color.GREEN);
+		
+		JButton btnGraficos = new JButton("Graficos");
+		btnGraficos.setForeground(Color.DARK_GRAY);
+		btnGraficos.setFont(new Font("Apple Chancery", Font.PLAIN, 24));
+		btnGraficos.setBackground(Color.GREEN);
+		
+		
+		btnGraficos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dashboard.setVisible(true);
+				dashboard.setSize(800, 600);
+			}
+		});
+		
+		
 		GroupLayout groupLayout = new GroupLayout(getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
@@ -115,9 +132,12 @@ public class View extends JFrame {
 						.addComponent(btnCadastrarMercadorias, GroupLayout.DEFAULT_SIZE, 345, Short.MAX_VALUE))
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(btnSair, GroupLayout.DEFAULT_SIZE, 436, Short.MAX_VALUE)
 						.addComponent(btnListarFretamentos, GroupLayout.DEFAULT_SIZE, 436, Short.MAX_VALUE)
-						.addComponent(btnCadastrarFretamento, GroupLayout.DEFAULT_SIZE, 436, Short.MAX_VALUE))
+						.addComponent(btnCadastrarFretamento, GroupLayout.DEFAULT_SIZE, 436, Short.MAX_VALUE)
+						.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+							.addComponent(btnGraficos, GroupLayout.PREFERRED_SIZE, 218, GroupLayout.PREFERRED_SIZE)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(btnSair, GroupLayout.PREFERRED_SIZE, 218, GroupLayout.PREFERRED_SIZE)))
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addComponent(desktopPane, GroupLayout.PREFERRED_SIZE, 1, GroupLayout.PREFERRED_SIZE)
 					.addGap(0))
@@ -140,7 +160,8 @@ public class View extends JFrame {
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 								.addComponent(btnSair, GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
-								.addComponent(btnListarMercadorias, GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE))))
+								.addComponent(btnListarMercadorias, GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
+								.addComponent(btnGraficos, GroupLayout.PREFERRED_SIZE, 276, GroupLayout.PREFERRED_SIZE))))
 					.addContainerGap())
 		);
 		getContentPane().setLayout(groupLayout);
