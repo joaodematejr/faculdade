@@ -10,6 +10,7 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
@@ -48,18 +49,15 @@ public class MerchandiseView extends JDialog {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						// TODO Auto-generated method stub
-						Merchandise merchandise = new Merchandise(getDefaultCloseOperation(), textField.getText(),
-								textField_1.getText());
+						Merchandise merchandise = new Merchandise(getDefaultCloseOperation(), textField.getText(), textField_1.getText());
 						try {
 							merchandiseController.add(merchandise);
 							textField.setText("");
 							textField_1.setText("");
 						} catch (SQLException e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
+							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
 						
-
 					}
 				});
 				getRootPane().setDefaultButton(okButton);

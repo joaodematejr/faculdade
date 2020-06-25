@@ -23,6 +23,7 @@ public class View extends JFrame {
 	ChartersView chartersView = new ChartersView();
 	ListMerchandiseView listMerchandiseView = new ListMerchandiseView();
 	MerchandiseController merchandiseController = new MerchandiseController();
+	ListChartersView listChartersView = new ListChartersView();
 	
 
 	public static void main(String[] args) {
@@ -97,6 +98,8 @@ public class View extends JFrame {
 		JButton btnListarFretamentos = new JButton("Listar Fretamentos");
 		btnListarFretamentos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				listChartersView.setVisible(true);
+				listChartersView.setSize(800, 600);
 			}
 		});
 		btnListarFretamentos.setForeground(Color.DARK_GRAY);
