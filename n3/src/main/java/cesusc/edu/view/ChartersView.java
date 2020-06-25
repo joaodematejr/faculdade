@@ -40,6 +40,24 @@ public class ChartersView extends JDialog {
 	}
 
 	public ChartersView() {
+	
+		
+		Vector<String> names = new Vector<String>();
+		rows = merchandiseController.queryMerchandise();
+		Iterator<Merchandise> it = rows.iterator();
+		
+		while (it.hasNext()) {
+			Merchandise e = it.next();
+			String getNames = e.getName();
+			names.addElement(getNames);
+		}
+
+		final JComboBox<String> comboBox = new JComboBox<String>(names);
+		
+		final String value = comboBox.getSelectedItem().toString();
+		
+
+		
 		setBounds(100, 100, 450, 300);
 		{
 			buttonPane = new JPanel();
@@ -49,6 +67,13 @@ public class ChartersView extends JDialog {
 				okButton.setActionCommand("OK");
 				buttonPane.add(okButton);
 				getRootPane().setDefaultButton(okButton);
+				
+				okButton.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						System.out.println(value);
+					}
+				});
 			}
 			{
 				JButton cancelButton = new JButton("Cancel");
@@ -64,17 +89,7 @@ public class ChartersView extends JDialog {
 			}
 		}
 		
-		Vector<String> names = new Vector<String>();
-		rows = merchandiseController.queryMerchandise();
-		Iterator<Merchandise> it = rows.iterator();
 		
-		while (it.hasNext()) {
-			Merchandise e = it.next();
-			String deptos = e.getName();
-			names.addElement(deptos);
-		}
-
-		JComboBox<String> comboBox = new JComboBox<String>(names);
 		JLabel lblNewLabel = new JLabel("Mercadoria");
 		JEditorPane editorPane = new JEditorPane();
 		JLabel lblDescrio = new JLabel("Descrição");

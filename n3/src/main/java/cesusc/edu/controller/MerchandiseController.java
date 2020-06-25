@@ -3,7 +3,6 @@ package cesusc.edu.controller;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.swing.JOptionPane;
 
@@ -36,7 +35,7 @@ public class MerchandiseController {
 	}
 	
 
-    public List<Merchandise> queryMerchandise() {
+    public ArrayList<Merchandise> queryMerchandise() {
         ResultSet rs = null;
         ArrayList<Merchandise> merchandises = new ArrayList<Merchandise>();
         try {
